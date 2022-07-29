@@ -64,7 +64,7 @@ p{
 
  figure.foto-legenda {
     position: relative;
-    border: 1px solid red;
+    border: 8px solid hsl(0, 22%, 96%);
     /*box-shadow: 3px blue;*/
     /*box-shadow: inset 0 0 1em rgb(48, 179, 8), 0 0 1em red;*/
     box-shadow:  0 0 1em rgb(172, 115, 115);    
@@ -74,6 +74,7 @@ p{
 figure.foto-legenda img{
     width: 100%;
     height: 100%;
+    
 }
 
 
@@ -85,7 +86,7 @@ figure.foto-legenda figcaption{
     color: white;
     width: 100%;
     height: 100%;
-    padding: 2px;
+    padding: 10px;
     box-sizing: border-box;
     transition: opacity 1s;
 }
@@ -107,7 +108,7 @@ nav#menu ul{
     text-transform: uppercase;   
     position: absolute;
     top: 0px;
-    left: 500px; 
+    left: 450px; 
 }
 
 
@@ -139,4 +140,29 @@ nav#menu a:hover{
     color: white;
     text-decoration: overline;
     
+}
+
+section#corpo{
+    display: block;
+    width: 500px;
+    float: left;
+    border-right: 1px solid red;
+    padding: 20px;
+
+}
+
+aside#lateral{
+    display: block;
+    width: 300px;
+    float: right;
+    padding: 20px;
+}
+
+footer#rodape{
+    clear: both;
+    border-top: 1px solid red;
+}
+
+footer#rodape{
+    text-align: center;
 }
