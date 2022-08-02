@@ -171,7 +171,37 @@ table#tabelaespec td{
     text-align: left;
 }
 
+table#tabelaespec td.ce{
+    text-align: right;
+    background-color: darkgray;
+    color: white;
+    vertical-align: top;
+    font-weight: bolder;
+}
 
+table#tabelaespec td.cd{
+    text-align: left;
+    background-color: darkgrey;
+    color: white;
+    font-weight: bold;
+}
+
+table#tabelaespec caption{
+    color: rgb(90, 86, 86);
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+table#tabelaespec caption span{
+    display: block;
+    float: right;
+    color: black;
+    font-size: 10px;
+    margin-top: 10px;
+
+
+}
 
 aside#lateral{
     display: block;
