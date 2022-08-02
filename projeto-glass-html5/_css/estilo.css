@@ -8,7 +8,10 @@ body{
     background-color: rgb(245, 247, 241);
     color: rgb( 0,0,0); 
     background-image: url("");/* comando para colocar imagem como papel de parede*/
+    
 }
+
+
 
 div#interface{
     width: 900px;
@@ -150,6 +153,25 @@ section#corpo{
     padding: 20px;
 
 }
+
+table#tabelaespec{
+    border: 1px solid red;
+    border-spacing: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    
+}
+
+table#tabelaespec td{
+
+    border: 1px solid red;
+    padding: 10px;
+    text-align: left;
+}
+
+
 
 aside#lateral{
     display: block;
