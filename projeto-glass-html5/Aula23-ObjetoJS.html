@@ -6,17 +6,42 @@
     <meta charset="utf-8"/>
     <title> Aula02 JavaScript</title>
     <script>
-        function acendeLampada(){
+        var quebrada=false;/* variavel criada para sinalizar lampada quedra ou não.*/
+
+        function mudaLampada(tipo){
+            if (tipo==2){
+                arquivo="_imagens/lampada-apagada.jpg";
+            }
+
+            if (tipo==1){
+                arquivo="_imagens/lampada-acesa.jpg";
+             }
+
+             if (tipo==3){
+                arquivo="_imagens/lampada-quebrada.jpg";
+                
+             }
+
+             if (!quebrada){
             /*alert("lampada acendeu");*/
-            document.getElementById("luz").src="_imagens/lampada-acesa.jpg";
+            document.getElementById("luz").src=arquivo;
+            
+
+            if (tipo==3){
+                quebrada=true;
+            }
+
         }
-            function apagaLampada(){
+
+           
+        }
+            /*function apagaLampada(){
                 document.getElementById("luz").src="_imagens/lampada-apagada.jpg";
             }
 
         function lampadaQuebrada(){
             document.getElementById("luz").src="_imagens/lampada-quebrada.jpg";
-        }
+        }*/
         
         
     </script>
@@ -26,9 +51,43 @@
 
 
 <body>
+    <!--
+var quebrada=false;/* variavel criada para sinalizar lampada quedra ou não.*/
+
+        function mudaLampada(tipo){
+            if (tipo==2){
+                arquivo="_imagens/lampada-apagada.jpg";
+            }
+
+            if (tipo==1){
+                arquivo="_imagens/lampada-acesa.jpg";
+             }
+
+             if (tipo==3){
+                arquivo="_imagens/lampada-quebrada.jpg";
+                
+             }
+
+             if (!quebrada){
+            /*alert("lampada acendeu");*/
+            document.getElementById("luz").src=arquivo;
+            
+
+            if (tipo==3){
+                quebrada=true;
+            }
+            
+        }
+
+           
+        }
+
+
+
+    -->
     <h1> Começando em JavaScript</h1>
     <h2> Lâmpada para acender ou apagar.</h2>
-    <img src="_imagens/lampada-apagada.jpg" id="luz" onmousemove="acendeLampada()" onmouseout="apagaLampada()" onclick="lampadaQuebrada()"/>
+    <img src="_imagens/lampada-apagada.jpg" id="luz" onmousemove="mudaLampada('lampada-acesa')" onmouseout="mudaLampada('lampada-apagada')" onclick="mudaLampada('lampada-quebrada')"/>
 
 </body>
 
