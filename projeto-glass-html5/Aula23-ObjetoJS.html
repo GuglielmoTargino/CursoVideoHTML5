@@ -9,27 +9,15 @@
         var quebrada=false;/* variavel criada para sinalizar lampada quedra ou não.*/
 
         function mudaLampada(tipo){
-            if (tipo==2){
-                arquivo="_imagens/lampada-apagada.jpg";
-            }
-
-            if (tipo==1){
-                arquivo="_imagens/lampada-acesa.jpg";
-             }
-
-             if (tipo==3){
-                arquivo="_imagens/lampada-quebrada.jpg";
-                
-             }
-
-             if (!quebrada){
-            /*alert("lampada acendeu");*/
-            document.getElementById("luz").src=arquivo;
             
+            if (!quebrada){
+            /*alert("lampada acendeu");*/
 
-            if (tipo==3){
-                quebrada=true;
-            }
+               document.getElementById("luz").src="_imagens/" +tipo+ ".jpg";   
+                    
+                    if (tipo=='lampada-quebrada'){
+                    quebrada=true;}
+            
 
         }
 
