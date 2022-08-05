@@ -1,15 +1,53 @@
-Google Glass
-A revolução do Google está chegando
 
-[AQUI ENTRA UMA FOTO]
+<!DOCTYPE html>
+<html lang="pt-br">
 
-Menu Principal
-- Home
-- Especificações
-- Fotos
-- Multimídia
-- Fale conosco
+<head><!--nesse head se colocam as metatags para comportamento do site-->
+    <meta charset="UTF-8">   
+    <title> A Google chegando com o seu Glass</title>
+    <link rel="stylesheet"  href="_css/estilo.css">
+       
 
+</head>
+
+<script src="_javascript/funcoes.js"></script>
+
+<body>
+
+
+<div id="interface">
+    <header id="cabecalho">
+    <hgroup>
+    <h1> Google Glass</h1>
+    <h2> A revolução do Google está chegando</h2>
+    </hgroup>
+
+    <!--<figure class="foto-legenda">-->
+    <img id="icone" src="_imagens/glass-oculos-preto-peq.png">
+    <!--<figcaption> 
+        <h3>O melhor das lentes</h3>
+        <p> A serviço da humanidade.</p>
+    </figcaption>-->
+    <!--</figure>-->
+
+    <!--<p>Guglielmo <sup>Targino</sup></p> exemplo de como colocar um numero exponencial-->
+
+    <nav id="menu">
+
+       <h1> Menu Principal</h1>
+        <ul type="a" start="4">       <!-- nesta linha, oode ser tambeém ol, lista ordenada-->
+            <li onmouseover="mudaOculos('_imagens/home.png')" onmouseout="mudaOculos('_imagens/glass-oculos-preto-peq.png')"> <a href="index.html">Home</a></li>
+            <li onmouseover="mudaOculos('_imagens/especificacoes.png')" onmouseout="mudaOculos('_imagens/glass-oculos-preto-peq.png')"> <a href="specs.html">Especificações</a></li>
+            <li  onmouseover="mudaOculos('_imagens/fotos.png')" onmouseout="mudaOculos('_imagens/glass-oculos-preto-peq.png')"> <a href="fotos.html">Fotos</a></li>
+            <li onmouseover="mudaOculos('_imagens/multimidia.png')" onmouseout="mudaOculos('_imagens/glass-oculos-preto-peq.png')"> <a href="multimidia.html">Multimídia</a></li>
+                <!-- <ol>
+                    <li>CDs</li> ==linha para ilistraçao de comando apenas
+                    <li>DVs</li> ===linha para iluistraçao de comando apenas
+                </ol>-->
+            <li onmouseover="mudaOculos('_imagens/contato.png')" onmouseout="mudaOculos('_imagens/glass-oculos-preto-peq.png')"> <a href="fale-conosco.html">Fale conosco</a></li>
+        </ul>
+    </nav>
+    </header>
 Fale Conosco > Contato
 Formulário de Contato
 por Gustavo Guanabara
@@ -43,5 +81,10 @@ Quero um Google Glass
 
 [BOTÃO ENVIAR]
 
-Copyright 2013 - by Gustavo Guanabara
-Facebook | Twitter
+<footer id="rodape">
+    Copyright 2013 - by Gustavo Guanabara<br/>
+    <a href="http://google.com.br" target=" blank"> Facebook</a> | <a href="http://google.com.br" target="_blank"> Twitter</a></p>
+    </footer>
+    </div>
+    </body>
+    </html>

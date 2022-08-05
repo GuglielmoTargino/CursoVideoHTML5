@@ -5,13 +5,11 @@
     <meta charset="UTF-8">   
     <title> A Google chegando com o seu Glass</title>
     <link rel="stylesheet"  href="_css/estilo.css">
-
-        
-
-
-    
+       
 
 </head>
+
+<script src="_javascript/funcoes.js"></script>
 
 <body>
 
@@ -37,15 +35,15 @@
 
        <h1> Menu Principal</h1>
         <ul type="a" start="4">       <!-- nesta linha, oode ser tambeém ol, lista ordenada-->
-            <li> <a href="index.html">Home</a></li>
-            <li> <a href="specs.html">Especificações</a></li>
-            <li> <a href="fotos.html">Fotos</a></li>
-            <li> <a href="multimidia.html">Multimídia</a></li>
+            <li onmouseover="mudaOculos('_imagens/home.png')" onmouseout="mudaOculos('_imagens/glass-oculos-preto-peq.png')"> <a href="index.html">Home</a></li>
+            <li onmouseover="mudaOculos('_imagens/especificacoes.png')" onmouseout="mudaOculos('_imagens/glass-oculos-preto-peq.png')"> <a href="specs.html">Especificações</a></li>
+            <li  onmouseover="mudaOculos('_imagens/fotos.png')" onmouseout="mudaOculos('_imagens/glass-oculos-preto-peq.png')"> <a href="fotos.html">Fotos</a></li>
+            <li onmouseover="mudaOculos('_imagens/multimidia.png')" onmouseout="mudaOculos('_imagens/glass-oculos-preto-peq.png')"> <a href="multimidia.html">Multimídia</a></li>
                 <!-- <ol>
                     <li>CDs</li> ==linha para ilistraçao de comando apenas
                     <li>DVs</li> ===linha para iluistraçao de comando apenas
                 </ol>-->
-            <li> <a href="fale-conosco.html">Fale conosco</a></li>
+            <li onmouseover="mudaOculos('_imagens/contato.png')" onmouseout="mudaOculos('_imagens/glass-oculos-preto-peq.png')"> <a href="fale-conosco.html">Fale conosco</a></li>
         </ul>
     </nav>
     </header>
