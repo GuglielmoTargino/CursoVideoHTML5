@@ -23,7 +23,7 @@
     </hgroup>
 
     <!--<figure class="foto-legenda">-->
-    <img id="icone" src="_imagens/glass-oculos-preto-peq.png">
+    <img id="icone" src="_imagens/especificacoes.png">
     <!--<figcaption> 
         <h3>O melhor das lentes</h3>
         <p> A serviço da humanidade.</p>
@@ -67,7 +67,15 @@
     <p>Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.</p>
 
     <section id="conteudo">
-        <img src="_imagens/glass-esquema-marcado.jpg"/>
+        <img src="_imagens/glass-esquema-marcado.jpg" usemap="#meumapa"/>
+
+        <map name="meumapa">
+            <area shape="rect" coords="182,212,268,257" href="google-glass.html#tela" target="janela"/>
+            <area shape="circle" coords="157,243,14" href="google-glass.html#camera" target="janela"/>
+            <area shape="circle" coords="76,51,14" href="google-glass.html#gadgets" target="janela"/>
+            <area shape="poly" coords="27,145,81,216,83,250,26,166" href="google-glass.html#sensores" target="janela"/>
+
+        </map>
         <iframe src="google-glass.html" name="janela" id="frame-spec"></iframe>
 
     </section>
