@@ -1,17 +1,25 @@
 @charset "UTF-08";
 
-section#conteudo{
-    width: 1000px;
+div#tv-radio{
+    width: 900px;
+    height: 580px;
     margin: auto;
+    background: url(../_imagens/radio-tv.png);
 }
 
-iframe#frame-spec{
-    width: 400px;
-    height: 280px;
-    border: none;
-    overflow: hidden;
+audio#musica{
+    display: block;
+    position: relative;
+    left: 572px;
+    top: 490px;
+    width: 300px;
 }
 
-iframe#frame-spec::-webkit-scrollbar{
-    display: none;
+video#filme{
+    display: block;
+    position: relative;
+    left: 80px;
+    top: 70px;
+    width: 450px;
 }
+    
