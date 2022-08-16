@@ -49,7 +49,7 @@
     </nav>
     </header>
 
-    <form>
+    <form method="post" id="ccontato" action="mailto:guglielmohenriquestargino@gmail.com">
 <fieldset> 
     <legend> Fale Conosco > Contato</legend>
 Formulário de Contato
@@ -75,22 +75,41 @@ Atualizado em 01/Maio/2013
     <legend>Endereço do Usuário</legend>
     <p> Logradouro:  <input type="text" name="tlogra" id="clogra" size="30" placeholder="rua, end e trav."/> </p>
     <p> Número: <input type="number" name="tname" id="cname" size="5" placeholder="num. end."/></p>
-    Estado: <input type="text" name="testado" id="cestado" size="2" maxlength="2" placeholder="sigla estado"/>
-    Cidade: <input type="text" name="tcidade" id="ccidade" size="20" maxlength="20" placeholder="cidade">
+
+    <label for="test"> Estado: </label>
+    <input name="test" id="cest" size="20" maxlength="20" placeholder="Sua UF" list="tado"> 
+    <datalist id="tado">
+        <option value="Rio Janeiro"></option> <!-- tag value define o valor que será enviado para o banco de dados-->
+        <option value="Sao Paulo"></option>
+    </datalist>
+    <label for="tcid"> Cidade: </label>
+
+    <select name="tcid" id="ccid">
+        <optgroup label="Est.SaoPaulo"> <!-- optgroip serve para definir grupos de opcoes-->
+        <option value="spc">Sao Paulo</option>
+        </optgroup>
+
+        <optgroup label="Est.Paraiba">
+        <option value="cgc"> Campina Grande</option>
+        </optgroup>
+    </select>
 </fieldset>
 
-<fieldset>
+<fieldset id="mensagens">
 <legend>Mensagem do Usuário</legend>
-    Grau de Urgência:
-    Mensagem:
-
+    <p> <label for="curg"> Grau de Urgência:</label>
+    min<input type="range" name="turg" id="curg" min="0" max="10" step="2">max
+    </p>
+   <p> <label for="cmensg"> Mensagem:</label>
+    <textarea name="tmsm" id="cmsm" cols="30" rows="10" placeholder="sua mensagem aqui"></textarea>
+</p>
 </fieldset>
-    <fieldset>
+    <fieldset id="pedido">
         <legend>Quero um Google Glass</legend>
-    Gostaria de adquirir um Google Glass quando disponível
-    Cor:
-    Quantidade:
-    Preço Total: R$
+    <p><label for="estoq">  Gostaria de adquirir um Google Glass quando disponível</label></p>
+    <p><label for="cor"> Cor:</label> </p>
+    <p><label for="quant">Quantidade:</label> </p>
+    <p><label for="prec">Preço Total: R$</label> </p>
 
 
 [BOTÃO ENVIAR]
