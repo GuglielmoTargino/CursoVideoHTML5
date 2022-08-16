@@ -23,7 +23,7 @@
     </hgroup>
 
     <!--<figure class="foto-legenda">-->
-    <img id="icone" src="_imagens/glass-oculos-preto-peq.png">
+    <img id="icone" src="_imagens/contato.png">
     <!--<figcaption> 
         <h3>O melhor das lentes</h3>
         <p> A serviço da humanidade.</p>
@@ -36,43 +36,57 @@
 
        <h1> Menu Principal</h1>
         <ul type="a" start="4">       <!-- nesta linha, oode ser tambeém ol, lista ordenada-->
-            <li onmouseover="mudaOculos('_imagens/home.png')" onmouseout="mudaOculos('_imagens/glass-oculos-preto-peq.png')"> <a href="index.html">Home</a></li>
-            <li onmouseover="mudaOculos('_imagens/especificacoes.png')" onmouseout="mudaOculos('_imagens/glass-oculos-preto-peq.png')"> <a href="specs.html">Especificações</a></li>
-            <li  onmouseover="mudaOculos('_imagens/fotos.png')" onmouseout="mudaOculos('_imagens/glass-oculos-preto-peq.png')"> <a href="fotos.html">Fotos</a></li>
-            <li onmouseover="mudaOculos('_imagens/multimidia.png')" onmouseout="mudaOculos('_imagens/glass-oculos-preto-peq.png')"> <a href="multimidia.html">Multimídia</a></li>
+            <li onmouseover="mudaOculos('_imagens/home.png')" onmouseout="mudaOculos('_imagens/contato.png')"> <a href="index.html">Home</a></li>
+            <li onmouseover="mudaOculos('_imagens/especificacoes.png')" onmouseout="mudaOculos('_imagens/contato.png')"> <a href="specs.html">Especificações</a></li>
+            <li  onmouseover="mudaOculos('_imagens/fotos.png')" onmouseout="mudaOculos('_imagens/contato.png')"> <a href="fotos.html">Fotos</a></li>
+            <li onmouseover="mudaOculos('_imagens/multimidia.png')" onmouseout="mudaOculos('_imagens/contato.png')"> <a href="multimidia.html">Multimídia</a></li>
                 <!-- <ol>
                     <li>CDs</li> ==linha para ilistraçao de comando apenas
                     <li>DVs</li> ===linha para iluistraçao de comando apenas
                 </ol>-->
-            <li onmouseover="mudaOculos('_imagens/contato.png')" onmouseout="mudaOculos('_imagens/glass-oculos-preto-peq.png')"> <a href="fale-conosco.html">Fale conosco</a></li>
+            <li onmouseover="mudaOculos('_imagens/contato.png')" onmouseout="mudaOculos('_imagens/contato.png')"> <a href="fale-conosco.html">Fale conosco</a></li>
         </ul>
     </nav>
     </header>
-Fale Conosco > Contato
+
+    <form>
+<fieldset> 
+    <legend> Fale Conosco > Contato</legend>
 Formulário de Contato
 por Gustavo Guanabara
 Atualizado em 01/Maio/2013
+</fieldset>
 
-Identificação do Usuário
-    Nome:
-    Senha:
-    E-mail:
-    Sexo:
-        - Masculino
-        - Feminino
-    Data de Nascimento:
+<fieldset>
+    <legend id="usuario">Identificação do Usuário</legend>
+    <p> <label for="cnome"> Nome:</label> <input type="text" name="tnome" id="cnome" size="20" maxlength="30" placeholder="Nome Completo"/> </p>
+    <p> Senha: <input type="password" name="tsenha" id="csenha" size="8" maxlength="8" placeholder="Senha"/> </p>
+    <p> E-mail:<input type="email" name="temail" id="cemail" size="20" maxlength="20" placeholder="Email"/> </p>
+    <fieldset id="sexo"><legend> Sexo:</legend>
+        <input type="radio" name="tsexo" id="tmasc" /> <label for="tmasc">- Masculino</label><br/>
+        <input type="radio" name="tsexo" id="tfem"/> <label for="tfem">- Feminino</label>
+        <p><input type="date"/> Data de Nascimento:</p>
+    
+</fieldset>
+    
+</fieldset>
 
-Endereço do Usuário
-    Logradouro:
-    Número:
-    Estado:
-    Cidade:
+<fieldset>
+    <legend>Endereço do Usuário</legend>
+    <p> Logradouro:  <input type="text" name="tlogra" id="clogra" size="30" placeholder="rua, end e trav."/> </p>
+    <p> Número: <input type="number" name="tname" id="cname" size="5" placeholder="num. end."/></p>
+    Estado: <input type="text" name="testado" id="cestado" size="2" maxlength="2" placeholder="sigla estado"/>
+    Cidade: <input type="text" name="tcidade" id="ccidade" size="20" maxlength="20" placeholder="cidade">
+</fieldset>
 
-Mensagem do Usuário
+<fieldset>
+<legend>Mensagem do Usuário</legend>
     Grau de Urgência:
     Mensagem:
 
-Quero um Google Glass
+</fieldset>
+    <fieldset>
+        <legend>Quero um Google Glass</legend>
     Gostaria de adquirir um Google Glass quando disponível
     Cor:
     Quantidade:
@@ -80,6 +94,9 @@ Quero um Google Glass
 
 
 [BOTÃO ENVIAR]
+</fieldset>
+UM BOTAO AQUI.
+</form>
 
 <footer id="rodape">
     Copyright 2013 - by Gustavo Guanabara<br/>
