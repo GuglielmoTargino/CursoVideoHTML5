@@ -6,11 +6,21 @@
     <meta charset="UTF-8">   
     <title> A Google chegando com o seu Glass</title>
     <link rel="stylesheet"  href="_css/estilo.css">
+    <link rel="stylesheet" href="_css/form.css">
        
 
 </head>
 
 <script src="_javascript/funcoes.js"></script>
+
+<script> /* essa funcao de JS foi cria aqui porque é utilizada apenas nesta pagina*/
+    function calc_tot(){
+        var qtd=parseInt (document.getElementById('quant').value);
+        tot=qtd*1300;
+        document.getElementById('prec').value=tot;
+
+    }
+</script>
 
 <body>
 
@@ -49,7 +59,7 @@
     </nav>
     </header>
 
-    <form method="post" id="ccontato" action="mailto:guglielmohenriquestargino@gmail.com">
+    <form method="post" id="ccontato" action="mailto:guglielmohenriquestargino@gmail.com" oninput="calc_tot();">
 <fieldset> 
     <legend> Fale Conosco > Contato</legend>
 Formulário de Contato
@@ -57,42 +67,50 @@ por Gustavo Guanabara
 Atualizado em 01/Maio/2013
 </fieldset>
 
-<fieldset>
-    <legend id="usuario">Identificação do Usuário</legend>
+<fieldset id="usuario">
+    <legend>Identificação do Usuário</legend>
     <p> <label for="cnome"> Nome:</label> <input type="text" name="tnome" id="cnome" size="20" maxlength="30" placeholder="Nome Completo"/> </p>
     <p> Senha: <input type="password" name="tsenha" id="csenha" size="8" maxlength="8" placeholder="Senha"/> </p>
     <p> E-mail:<input type="email" name="temail" id="cemail" size="20" maxlength="20" placeholder="Email"/> </p>
+
     <fieldset id="sexo"><legend> Sexo:</legend>
         <input type="radio" name="tsexo" id="tmasc" /> <label for="tmasc">- Masculino</label><br/>
         <input type="radio" name="tsexo" id="tfem"/> <label for="tfem">- Feminino</label>
-        <p><input type="date"/> Data de Nascimento:</p>
+       
     
 </fieldset>
+<p><input type="date"/> Data de Nascimento:</p>
     
 </fieldset>
 
-<fieldset>
+<fieldset id="endusuario">
     <legend>Endereço do Usuário</legend>
     <p> Logradouro:  <input type="text" name="tlogra" id="clogra" size="30" placeholder="rua, end e trav."/> </p>
     <p> Número: <input type="number" name="tname" id="cname" size="5" placeholder="num. end."/></p>
+    
 
     <label for="test"> Estado: </label>
     <input name="test" id="cest" size="20" maxlength="20" placeholder="Sua UF" list="tado"> 
+
     <datalist id="tado">
         <option value="Rio Janeiro"></option> <!-- tag value define o valor que será enviado para o banco de dados-->
         <option value="Sao Paulo"></option>
     </datalist>
-    <label for="tcid"> Cidade: </label>
 
-    <select name="tcid" id="ccid">
+    
+    <p><label for="tcid"> Cidade: </label>
+         <select name="tcid" id="ccid">
+
+        
         <optgroup label="Est.SaoPaulo"> <!-- optgroip serve para definir grupos de opcoes-->
-        <option value="spc">Sao Paulo</option>
+            <option value="spc">Sao Paulo</option>
         </optgroup>
 
         <optgroup label="Est.Paraiba">
-        <option value="cgc"> Campina Grande</option>
+            <option value="cgc"> Campina Grande</option>
         </optgroup>
-    </select>
+    </select></p>
+
 </fieldset>
 
 <fieldset id="mensagens">
@@ -106,15 +124,19 @@ Atualizado em 01/Maio/2013
 </fieldset>
     <fieldset id="pedido">
         <legend>Quero um Google Glass</legend>
-    <p><label for="estoq">  Gostaria de adquirir um Google Glass quando disponível</label></p>
-    <p><label for="cor"> Cor:</label> </p>
-    <p><label for="quant">Quantidade:</label> </p>
-    <p><label for="prec">Preço Total: R$</label> </p>
+        
+    <p><input type="checkbox" name="tstoq" id="estoq"><label for="estoq">  Gostaria de adquirir um Google Glass quando disponível</label></p>
+    <p><input type="color" name="tcor" id="cor" value="#555566"> <label for="cor"> Cor:</label> </p>
+    <p><input type="number" name="tquant" id="quant" min="0" max="6" value="0"> <label for="quant">Quantidade:</label> </p>
+    <p><input type="text" name="tprec" id="prec" placeholder="total a pagar" readonly> <label for="prec">Preço Total: R$</label> </p>
 
 
-[BOTÃO ENVIAR]
+
 </fieldset>
-UM BOTAO AQUI.
+<!--<input type="text" name="tbot" id="cbot" placeholder="enviar">======outro exemplo de criar um botao-->
+<input type="image" src="_imagens/botao-enviar.png" name="tenviar" id="cenvi">
+
+
 </form>
 
 <footer id="rodape">
